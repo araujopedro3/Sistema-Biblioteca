@@ -1,49 +1,21 @@
 package br.com.sistemabiblioteca.domain;
 
-public class Livro {
-    private String nomeLivro;
-    private String autor;
-    private String isbn;
-    private boolean disponivel;
+public class Livro extends MaterialAcervo {
 
-    public Livro(String nomeLivro, String autor, String isbn, boolean disponivel) {
-        this.nomeLivro = nomeLivro;
-        this.autor = autor;
-        this.isbn = isbn;
-        this.disponivel = disponivel;
-    }
-
-    public String getNomeLivro() {
-        return nomeLivro;
-    }
-
-    public void setNomeLivro(String nomeLivro) {
-        this.nomeLivro = nomeLivro;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public Livro(String titulo, String autor, String isbn) {
+        super(isbn, titulo, autor);
     }
 
     public String getIsbn() {
-        return isbn;
+        return getCodigo();
     }
 
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
+    public String getAutor() {
+        return getDetalhes();
     }
 
-    public boolean isDisponivel() {
-        return disponivel;
+    @Override
+    public String getTipo() {
+        return "Livro";
     }
-
-    public void setDisponivel(boolean disponivel) {
-        this.disponivel = disponivel;
-    }
-
-
 }

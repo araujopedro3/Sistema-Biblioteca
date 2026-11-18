@@ -1,10 +1,11 @@
 package br.com.sistemabiblioteca.domain;
 
 public class Pessoa {
-    protected String nome;
-    protected int idade;
-    protected String cpf;
-    protected String email;
+
+    private String nome;
+    private int idade;
+    private String cpf;
+    private String email;
 
     public Pessoa(String nome, int idade, String cpf, String email) {
         this.nome = nome;
